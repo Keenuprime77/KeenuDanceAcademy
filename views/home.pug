@@ -1,0 +1,47 @@
+extends base.pug
+
+block scripts 
+    script(src='/static/index.js')
+
+block style 
+    style 
+        include ../static/style.css
+
+block content
+    section#introSection 
+        div Welcome to Keenu dance academy 
+        div.small Eat sleep dance repeat 
+        
+    section#missionSection 
+        h2 Our Mission
+        div.card
+            h3  Dance perfection
+            div.card-box
+                div.card-img
+                    img(src="/static/card1.png", alt="")
+                div.card-content
+                    p This is the best dance academy of the universe
+
+        div.card
+            h3  Dance the way you like
+            div.card-box
+                div.card-img
+                    img(src="/static/card2.png", alt="")
+                div.card-content
+                    p This is the best dance academy of the universe
+
+        div.card
+            h3  Expert Teaching 
+            div.card-box
+                div.card-img
+                    img(src="/static/card3.png", alt="")
+                div.card-content
+                    p This is the best dance academy of the universe
+         
+    section#sponsorsSection 
+        h2 Our Sponsors  
+        div#sponsors
+            img(src="/static/applelogo.png", alt="sponsore image" , class="spimage")
+            img(src="/static/hplogo.png", alt="sponsore image" , class="spimage")
+            img(src="/static/instalogo.png", alt="sponsore image" , class="spimage")
+            img(src="/static/fblogo.png", alt="sponsore image" , class="spimage")     
