@@ -2,9 +2,9 @@ const express = require("express");
 const path = require('path');
 const app = express();
 const  mongoose = require('mongoose');
-const bodyParser = require("body-parser") 
-const username = process.env.MONGODB_USERNAME
-const password = process.env.MONGODB_PASSWORD
+const bodyParser = require("body-parser");
+const username = process.env.MONGODB_USERNAME;
+const password = process.env.MONGODB_PASSWORD;
 mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.tazvk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
 const port = 8000;
 
@@ -19,7 +19,8 @@ var contactSchema = new mongoose.Schema({
 
 
 var Contact = mongoose.model('Contact',contactSchema);
-
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyparser.json());
 //EXPRESS SPECIFIC STUFF
 app.use('/static',express.static('static'));
 app.use(express.urlencoded());
