@@ -5,7 +5,7 @@ const  mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
-mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.tazvk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
+mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.tazvk.mongodb.net/contactformDB`);
 const port = 8000;
 
 //DEFINE MONGO SCHEMA
