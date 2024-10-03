@@ -20,7 +20,7 @@ var contactSchema = new mongoose.Schema({
 
 var Contact = mongoose.model('Contact',contactSchema);
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyparser.json());
+app.use(bodyParser.json());
 //EXPRESS SPECIFIC STUFF
 app.use('/static',express.static('static'));
 app.use(express.urlencoded());
