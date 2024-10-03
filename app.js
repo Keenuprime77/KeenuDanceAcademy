@@ -15,7 +15,9 @@ var contactSchema = new mongoose.Schema({
     desc:String
 });
 
-var Contact = mongoose.model('Contact',contactSchema);
+const username = process.env.MONGODB_USERNAME
+const password = process.env.MONGODB_PASSWORD
+var Contact = mongoose.model(`mongodb+srv://${username}:${password}@cluster0.tazvk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,contactSchema);
 
 //EXPRESS SPECIFIC STUFF
 app.use('/static',express.static('static'));
